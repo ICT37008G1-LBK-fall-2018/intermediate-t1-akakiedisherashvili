@@ -52,10 +52,26 @@ var students = [
     function studentsfunction(student){
     	for (var i = 0; i < students.length; i++) {
 		    var node = document.createElement("li");
-		    var textnode = document.createTextNode(student[i]);
+		    var textnode = document.createTextNode(students[i].FirstName);
 		    node.appendChild(textnode);
 		    document.getElementById("list").appendChild(node);
-		    console.log(textnode)
+
+		    var node = document.createElement("li");
+		    var textnode = document.createTextNode(students[i].LastName);
+		    node.appendChild(textnode);
+		    document.getElementById("list").appendChild(node);
+
+		     var node = document.createElement("li");
+		    var textnode = document.createTextNode(students[i].PersonalNumber);
+		    node.appendChild(textnode);
+		    document.getElementById("list").appendChild(node);
+
+		    var node = document.createElement("li");
+		    var textnode = document.createTextNode(students[i].Grade);
+		    node.appendChild(textnode);
+		    node.style.borderBottom = '1px solid gray';
+		    document.getElementById("list").appendChild(node);
+
 		}	
     }
     studentsfunction()
