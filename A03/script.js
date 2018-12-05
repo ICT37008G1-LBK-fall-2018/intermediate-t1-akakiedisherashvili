@@ -1,5 +1,4 @@
-
-let students = [
+var students = [
     {
         FirstName: 'name 1',
         LastName: 'lname 1',
@@ -49,4 +48,14 @@ let students = [
         Grade: 65
     }
 
-];
+	]
+    function studentsfunction(student){
+    	for (var i = 0; i < students.length; i++) {
+		    var node = document.createElement("li");
+		    var textnode = document.createTextNode(student[i]);
+		    node.appendChild(textnode);
+		    document.getElementById("list").appendChild(node);
+		    console.log(textnode)
+		}	
+    }
+    studentsfunction()
